@@ -1,0 +1,850 @@
+/*
+  =====================================================
+  index.css — Home Page Styles
+  Project: Discover Kigali Tourism Website
+  =====================================================
+
+  🎨 DESIGN STORY:
+  The "Kigali Verde & Sunset" colour palette was carefully chosen
+  to reflect Rwanda's soul:
+
+  🌿 Green (#2D5A27) — The lush thousand hills that surround Kigali,
+     the banana trees, the tea plantations, and Rwanda's famous
+     commitment to environmental protection.
+
+  🌅 Terracotta (#E38C6A) — The warm clay soil of Rwanda's hillsides,
+     the sunset over Lake Kivu, and the warmth of Rwandan hospitality.
+
+  🏜️ Cream (#F5F5DC) — The light, airy feeling of Rwanda's highland
+     climate and the clean, welcoming spaces of modern Kigali.
+
+  ✨ Gold (#FFD700) — The golden sunlight, the shine in every
+     Rwandan smile, and the bright future this country is building.
+
+  Typography: "Outfit" for clean modern UI + "Playfair Display" for
+  elegant headings that feel prestigious without being stuffy.
+
+  I'm super proud of how this came together! — Junior Dev 🌍
+*/
+
+/* ===== CSS VARIABLES — My mentor showed me this trick! So much easier to change colours now ===== */
+:root {
+  --green: #2D5A27;
+  --green-light: #3d7a34;
+  --green-dark: #1e3d1b;
+  --terracotta: #E38C6A;
+  --terracotta-light: #f0a98a;
+  --cream: #F5F5DC;
+  --cream-dark: #ede9c8;
+  --gold: #FFD700;
+  --gold-dark: #e6c200;
+  --text-dark: #1a1a1a;
+  --text-medium: #444;
+  --text-light: #777;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.12);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.18);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* ===== RESET — Always reset first before adding styles! ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Finally figured out how smooth scrolling works — one line! */
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--green-dark);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-medium);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--green-dark);
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  border: 2px solid var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--green-dark);
+}
+
+/* ===== NAVBAR ===== */
+/* Position: fixed so it stays at the top as you scroll — so useful! */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background-color: rgba(45, 90, 39, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-icon {
+  font-size: 1.8rem;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+/* Using <ul> for nav links — correct semantic approach! */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-links li a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+/* The required hover effect! Yellow (#FFD700) on hover ✅ */
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: var(--gold);
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.btn-nav {
+  background-color: var(--terracotta);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-nav:hover {
+  background-color: var(--gold);
+  color: var(--green-dark);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  background-image: url('https://picsum.photos/seed/kigali-hero/1400/900');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect — looks SO cool! */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+}
+
+/* Dark overlay so text is readable on top of the image */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 50, 18, 0.6) 0%,
+    rgba(20, 50, 18, 0.5) 60%,
+    rgba(20, 50, 18, 0.8) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+}
+
+.hero-eyebrow {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-title em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Stats bar at bottom of hero — Flexbox makes these line up perfectly! */
+.hero-stats {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 48px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===== VIDEO SECTION ===== */
+.video-section {
+  padding: 96px 24px;
+  background-color: var(--green-dark);
+}
+
+.video-section .section-title {
+  color: var(--white);
+}
+
+.video-section .section-subtitle {
+  color: rgba(255,255,255,0.7);
+}
+
+/* The padding-bottom trick for 16:9 ratio — finally figured this out! */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--gold);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== DESTINATIONS GRID ===== */
+.destinations {
+  padding: 96px 24px;
+  background-color: var(--cream);
+}
+
+/* Using CSS Grid — so much better than trying to do this with floats! */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.dest-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: block;
+}
+
+.dest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dest-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.dest-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dest-card:hover .dest-img {
+  transform: scale(1.05);
+}
+
+.dest-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: var(--gold);
+  color: var(--green-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+.dest-info {
+  padding: 24px;
+}
+
+.dest-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--green-dark);
+  margin-bottom: 10px;
+}
+
+.dest-info p {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.dest-link {
+  color: var(--terracotta);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.dest-card:hover .dest-link {
+  color: var(--green);
+}
+
+/* ===== PLAN YOUR VISIT SECTION ===== */
+.plan-section {
+  padding: 96px 24px;
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+}
+
+.plan-container {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.plan-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-text .section-title {
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.plan-text > p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+}
+
+/* Styled ordered list — the default browser style was boring! */
+.plan-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.plan-list li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.08);
+  padding: 20px 24px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--gold);
+}
+
+.step-num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.6;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.plan-list li div strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.plan-list li div p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.plan-list li a {
+  color: var(--gold);
+}
+
+.plan-image {
+  flex: 0 0 380px;
+  position: relative;
+}
+
+.plan-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--gold);
+}
+
+.plan-img-caption {
+  text-align: center;
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* ===== MAP SECTION ===== */
+.map-section {
+  padding: 96px 24px;
+  background-color: var(--cream-dark);
+}
+
+/* Same 16:9 ratio trick I used for the video! */
+.map-wrapper {
+  position: relative;
+  padding-bottom: 50%;
+  height: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--green);
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery-section {
+  padding: 96px 24px;
+  background-color: var(--cream);
+}
+
+/* CSS Grid with auto layout — this creates a cool masonry-like look! */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  grid-template-areas:
+    "tall img2 img3"
+    "wide wide img5";
+}
+
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  position: relative;
+}
+
+.gallery-img.tall {
+  grid-area: tall;
+  height: 516px;
+}
+
+.gallery-img.wide {
+  grid-area: wide;
+  height: 250px;
+}
+
+/* ===== CONTACT / NEWSLETTER SECTION ===== */
+.contact-section {
+  padding: 96px 24px;
+  background-color: var(--terracotta);
+  background-image: url('https://picsum.photos/seed/contact-bg/1400/600');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.95);
+  border-radius: var(--radius);
+  padding: 64px;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--green-dark);
+  margin-bottom: 16px;
+}
+
+.contact-text p {
+  color: var(--text-medium);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.contact-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-perks li {
+  color: var(--text-medium);
+  font-size: 1rem;
+}
+
+/* Form styling — took me a while but I'm happy with how clean this looks! */
+.contact-form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-sm);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  grid-column: 1 / -1;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-submit:hover {
+  background-color: var(--gold);
+  color: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+/* Using <footer> keeps this section semantically correct! */
+.footer {
+  background-color: var(--green-dark);
+  padding: 64px 40px 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand .brand-name {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 8px 0;
+}
+
+.footer-brand p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.footer-links h4 {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links ul a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.footer-links ul a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 24px;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE — Making sure the site looks good on phones too! ===== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    display: none; /* TODO: Add a hamburger menu later! */
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+  .plan-container {
+    flex-direction: column;
+  }
+
+  .plan-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .plan-image img {
+    height: 300px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 40px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "tall img2"
+      "img3 img5"
+      "wide wide";
+  }
+
+  .gallery-img.tall {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+
+  .gallery-img.tall,
+  .gallery-img.wide {
+    height: 220px;
+    grid-area: auto;
+  }
+}
