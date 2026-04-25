@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Always start with the charset and viewport — learned this the hard way after my text looked weird on mobile! -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Kigali — Rwanda's Jewel</title>
+
+  <!-- Linking our beautiful Outfit font from Google — way better than Arial! -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Linking our home-specific CSS file -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- Using <header> and <nav> here to keep things semantic — my mentor says browsers and screen readers love this! -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🌿</span>
+      <span class="brand-name">Discover Kigali</span>
+    </div>
+    <!-- The nav links — adding them so visitors can jump to any page easily -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="kcc.html">Convention Centre</a></li>
+        <li><a href="nyamirambo.html">Nyamirambo</a></li>
+        <li><a href="cuisine.html">Cuisine</a></li>
+        <li><a href="memorial.html">Memorial</a></li>
+      </ul>
+    </nav>
+    <!-- Hamburger for mobile — finally figured out how to make this work with just CSS! -->
+    <div class="nav-cta">
+      <a href="#contact" class="btn-nav">Plan Your Trip</a>
+    </div>
+  </header>
+
+  <!-- Main content starts here — using <main> for semantics! -->
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <!-- This is the first thing visitors see, so I made it BIG and beautiful -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Welcome to Rwanda</p>
+        <h1 class="hero-title">The City of a<br/><em>Thousand Hills</em></h1>
+        <p class="hero-subtitle">Explore Kigali — Africa's cleanest, safest, and most vibrant capital city. Where lush green hills meet modern skylines and warm Rwandan hospitality.</p>
+        <div class="hero-actions">
+          <a href="#destinations" class="btn-primary">Explore Destinations</a>
+          <a href="#map" class="btn-secondary">View on Map</a>
+        </div>
+      </div>
+      <!-- Hero stats — added these to give visitors quick facts! -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">1,000+</span>
+          <span class="stat-label">Hills</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Must-See Spots</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">12°C</span>
+          <span class="stat-label">Avg. Temp</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIDEO SECTION ===== -->
+    <!-- Using <section> with a clear id so I can link to it from the hero -->
+    <section class="video-section">
+      <div class="container">
+        <h2 class="section-title">See Kigali Come to Life</h2>
+        <p class="section-subtitle">Watch this short film and fall in love with Rwanda's breathtaking capital before you even arrive.</p>
+        <!-- Using an iframe to embed a YouTube video — <video> tag is for local files, iframe for YouTube! -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/h4i_RBbZczQ"
+            title="Kigali, Rwanda — City of a Thousand Hills"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESTINATIONS SECTION ===== -->
+    <!-- Using CSS Grid for the cards layout — Grid is so much cleaner than floats! -->
+    <section class="destinations" id="destinations">
+      <div class="container">
+        <h2 class="section-title">Top Destinations</h2>
+        <p class="section-subtitle">Four incredible places that make Kigali unforgettable. Click any card to explore!</p>
+
+        <div class="destinations-grid">
+
+          <!-- Destination Card 1: Kigali Convention Centre -->
+          <a href="kcc.html" class="dest-card">
+            <div class="dest-img-wrap">
+              <img
+                src="https://picsum.photos/seed/kcc-kigali/600/400"
+                alt="The stunning Kigali Convention Centre dome, a modern architectural masterpiece with a curved glass roof reflecting the city skyline"
+                class="dest-img"
+              />
+              <span class="dest-badge">Architecture</span>
+            </div>
+            <div class="dest-info">
+              <h3>Kigali Convention Centre</h3>
+              <p>Africa's most iconic convention venue — a stunning dome that lights up Kigali's skyline every night.</p>
+              <span class="dest-link">Explore →</span>
+            </div>
+          </a>
+
+          <!-- Destination Card 2: Nyamirambo -->
+          <a href="nyamirambo.html" class="dest-card">
+            <div class="dest-img-wrap">
+              <img
+                src="https://picsum.photos/seed/nyamirambo/600/400"
+                alt="Vibrant street life in Nyamirambo neighbourhood, Kigali, with colourful market stalls and local residents going about their day"
+                class="dest-img"
+              />
+              <span class="dest-badge">Culture</span>
+            </div>
+            <div class="dest-info">
+              <h3>Nyamirambo</h3>
+              <p>Kigali's most vibrant neighbourhood — a colourful mix of street life, markets, mosques, and local cuisine.</p>
+              <span class="dest-link">Explore →</span>
+            </div>
+          </a>
+
+          <!-- Destination Card 3: Rwandan Cuisine -->
+          <a href="cuisine.html" class="dest-card">
+            <div class="dest-img-wrap">
+              <img
+                src="https://picsum.photos/seed/rwandafood/600/400"
+                alt="A beautiful spread of traditional Rwandan food including isombe, brochettes, and fresh tropical fruits arranged on banana leaves"
+                class="dest-img"
+              />
+              <span class="dest-badge">Food & Drink</span>
+            </div>
+            <div class="dest-info">
+              <h3>Rwandan Cuisine</h3>
+              <p>From hearty bean stews to sizzling brochettes — Kigali's food scene will surprise and delight every foodie.</p>
+              <span class="dest-link">Explore →</span>
+            </div>
+          </a>
+
+          <!-- Destination Card 4: Kigali Genocide Memorial -->
+          <a href="memorial.html" class="dest-card">
+            <div class="dest-img-wrap">
+              <img
+                src="https://picsum.photos/seed/memorial-kigali/600/400"
+                alt="The serene garden at the Kigali Genocide Memorial with purple flowers symbolising remembrance and healing"
+                class="dest-img"
+              />
+              <span class="dest-badge">History</span>
+            </div>
+            <div class="dest-info">
+              <h3>Genocide Memorial</h3>
+              <p>A place of remembrance, education, and hope — honouring the 250,000+ lives lost in 1994 and Rwanda's incredible rebirth.</p>
+              <span class="dest-link">Explore →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLAN YOUR VISIT — ORDERED LIST ===== -->
+    <!-- Using an <ol> here because the steps need to be in order — very important! -->
+    <section class="plan-section">
+      <div class="container plan-container">
+        <div class="plan-text">
+          <h2 class="section-title left">Steps to Plan Your<br/>Kigali Visit</h2>
+          <p>Planning a trip to Rwanda is easier than you think. Follow these steps and you'll be sipping Rwandan coffee on a Kigali hilltop in no time!</p>
+
+          <ol class="plan-list">
+            <li>
+              <span class="step-num">01</span>
+              <div>
+                <strong>Check Visa Requirements</strong>
+                <p>Most nationalities can get a 30-day visa on arrival. Check the <a href="https://www.migration.gov.rw" target="_blank" rel="noopener">Rwanda Migration Authority</a> website for your country.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">02</span>
+              <div>
+                <strong>Book Your Flights to RWF Kigali Airport</strong>
+                <p>Kigali International Airport (KGL) is well-connected via Ethiopian Airlines, RwandAir, and Brussels Airlines.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">03</span>
+              <div>
+                <strong>Choose Your Accommodation</strong>
+                <p>From the luxury Kigali Marriott to budget-friendly guesthouses in Kimihurura — there's a bed for every budget.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">04</span>
+              <div>
+                <strong>Plan Your Itinerary</strong>
+                <p>Mix cultural visits (Memorial, museums) with nature (Nyungwe Forest, Volcanoes NP) and city life (Nyamirambo, KCC).</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">05</span>
+              <div>
+                <strong>Get Travel Insurance</strong>
+                <p>Always a good idea! Rwanda is very safe but insurance covers medical emergencies and flight delays.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">06</span>
+              <div>
+                <strong>Pack Smart — Rwanda Has Eco Rules!</strong>
+                <p>Rwanda bans plastic bags, so bring reusable bags. Dress modestly when visiting religious or memorial sites.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="plan-image">
+          <img
+            src="https://picsum.photos/seed/kigali-hills/500/650"
+            alt="Panoramic view of Kigali's green hills stretching into the horizon under a golden sunset sky"
+          />
+          <div class="plan-img-caption">🌿 Kigali — Green, Clean, and Beautiful</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOOGLE MAP SECTION ===== -->
+    <!-- Using an iframe to embed the Google Map — the <embed> way wasn't working for me so this is cleaner! -->
+    <section class="map-section" id="map">
+      <div class="container">
+        <h2 class="section-title">Find Us on the Map</h2>
+        <p class="section-subtitle">Kigali sits at the heart of Rwanda — perfectly positioned for exploring the country's many wonders.</p>
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127672.75054861246!2d30.001853843750007!3d-1.9441089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            title="Map of Kigali, Rwanda"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <!-- Flexbox works perfectly here for a masonry-like look! -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">A Glimpse of Kigali</h2>
+        <div class="gallery-grid">
+          <img src="https://picsum.photos/seed/kigali1/400/300" alt="Modern Kigali city skyline with high-rise buildings against the green hill backdrop at dusk" class="gallery-img tall" />
+          <img src="https://picsum.photos/seed/kigali2/400/300" alt="Women carrying colourful baskets at a traditional Kigali outdoor market" class="gallery-img" />
+          <img src="https://picsum.photos/seed/kigali3/400/300" alt="Rwandan coffee ceremony with freshly brewed arabica coffee served in traditional clay cups" class="gallery-img" />
+          <img src="https://picsum.photos/seed/kigali4/400/400" alt="Aerial photograph of Kigali's rolling green hills covered in red-roofed homes at sunrise" class="gallery-img wide" />
+          <img src="https://picsum.photos/seed/kigali5/400/300" alt="Local Kigali artisan crafting traditional Imigongo geometric art patterns in black and white" class="gallery-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT / NEWSLETTER FORM ===== -->
+    <!-- Using <form> here — this is the proper semantic element for user input! -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-text">
+            <h2>Stay in the Loop</h2>
+            <p>Get weekly travel tips, hidden gems, and exclusive Kigali deals delivered straight to your inbox. Join over 5,000 Rwanda lovers!</p>
+            <ul class="contact-perks">
+              <li>✅ Weekly destination guides</li>
+              <li>✅ Best restaurant picks</li>
+              <li>✅ Exclusive hotel deals</li>
+              <li>✅ Event & festival alerts</li>
+            </ul>
+          </div>
+          <!-- Form action="#" means it goes nowhere for now — in a real project I'd connect this to a backend! -->
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="e.g. Amina" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="e.g. Uwimana" required />
+            </div>
+            <div class="form-group full">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group full">
+              <label for="interest">I'm Most Interested In...</label>
+              <select id="interest" name="interest">
+                <option value="">-- Select an option --</option>
+                <option value="culture">Culture & History</option>
+                <option value="food">Food & Cuisine</option>
+                <option value="nature">Nature & Wildlife</option>
+                <option value="nightlife">Nightlife & Entertainment</option>
+                <option value="all">All of the Above!</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="message">Your Message (Optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us about your dream Kigali trip..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Subscribe & Explore 🌍</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Using <footer> here to keep things semantic — my mentor said this is important for accessibility! -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">🌿</span>
+        <span class="brand-name">Discover Kigali</span>
+        <p>Your guide to Rwanda's beautiful capital city. Made with ❤️ and lots of Rwandan coffee.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kcc.html">Convention Centre</a></li>
+          <li><a href="nyamirambo.html">Nyamirambo</a></li>
+          <li><a href="cuisine.html">Rwandan Cuisine</a></li>
+          <li><a href="memorial.html">Genocide Memorial</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>External Resources</h4>
+        <ul>
+          <!-- External links — opening in a new tab so users don't lose our site! -->
+          <li><a href="https://www.visitrwanda.com" target="_blank" rel="noopener">Visit Rwanda Official</a></li>
+          <li><a href="https://www.rwandair.com" target="_blank" rel="noopener">RwandAir</a></li>
+          <li><a href="https://www.kgm.rw" target="_blank" rel="noopener">Kigali City Website</a></li>
+          <li><a href="https://www.tripadvisor.com/Tourism-g304154-Kigali_Kigali_Province-Vacations.html" target="_blank" rel="noopener">TripAdvisor: Kigali</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Discover Kigali. Built with HTML, CSS & love for Rwanda. 🇷🇼</p>
+    </div>
+  </footer>
+
+</body>
+</html>
