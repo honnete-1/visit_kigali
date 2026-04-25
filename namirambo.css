@@ -1,0 +1,609 @@
+/*
+  =====================================================
+  nyamirambo.css — Nyamirambo Neighbourhood Page Styles
+  Project: Discover Kigali Tourism Website
+  =====================================================
+
+  Design Story:
+  Nyamirambo is the most energetic and colourful neighbourhood
+  in Kigali, so this CSS goes a bit warmer and more vibrant than
+  the other pages. I used terracotta more prominently here, and
+  the layout feels looser and more "street-level" compared to the
+  polished KCC page. The photos and cards have a slightly warmer
+  shadow to evoke the golden light of a Kigali evening. 🌅
+  — Junior Dev 🎨
+*/
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --green: #2D5A27;
+  --green-light: #3d7a34;
+  --green-dark: #1e3d1b;
+  --terracotta: #E38C6A;
+  --terracotta-light: #f0a98a;
+  --terracotta-dark: #c96e4e;
+  --cream: #F5F5DC;
+  --cream-dark: #ede9c8;
+  --gold: #FFD700;
+  --gold-dark: #e6c200;
+  --text-dark: #1a1a1a;
+  --text-medium: #444;
+  --text-light: #777;
+  --white: #ffffff;
+  --shadow-warm: 0 6px 24px rgba(227, 140, 106, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.12);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.18);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--green-dark);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ===== NAVBAR — same as all pages ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background-color: rgba(45, 90, 39, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon { font-size: 1.8rem; }
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-links li a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+/* Yellow hover effect — consistent on every page! ✅ */
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: var(--gold);
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.btn-nav {
+  background-color: var(--terracotta);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-nav:hover {
+  background-color: var(--gold);
+  color: var(--green-dark);
+}
+
+/* ===== PAGE HERO — Warm terracotta-tinted overlay for the Nyamirambo vibe ===== */
+.page-hero {
+  min-height: 70vh;
+  position: relative;
+  background-image: url('https://picsum.photos/seed/nyamirambo-hero/1400/800');
+  background-size: cover;
+  background-position: center 40%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 24px 80px;
+  padding-top: 100px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(90, 30, 10, 0.88) 0%,
+    rgba(90, 30, 10, 0.35) 50%,
+    rgba(90, 30, 10, 0.1) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.breadcrumb {
+  display: inline-block;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.breadcrumb:hover { color: var(--white); }
+
+.page-tag {
+  display: inline-block;
+  background: var(--terracotta);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 560px;
+}
+
+/* ===== INTRO SECTION ===== */
+.intro-section {
+  padding: 96px 24px;
+  background-color: var(--white);
+}
+
+.intro-grid {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--green-dark);
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  color: var(--text-medium);
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.intro-text strong {
+  color: var(--terracotta-dark);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--terracotta);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 16px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-warm);
+}
+
+.btn-primary:hover {
+  background-color: var(--gold);
+  color: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.intro-imgs {
+  flex: 0 0 440px;
+}
+
+.img-main {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-warm);
+  border: 4px solid var(--terracotta);
+}
+
+/* ===== FACTS STRIP ===== */
+.facts-strip {
+  background: linear-gradient(135deg, var(--terracotta-dark) 0%, var(--terracotta) 100%);
+  padding: 48px 24px;
+}
+
+.facts-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.fact-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-num {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--white);
+}
+
+.fact-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===== THINGS TO DO — UNORDERED LIST SECTION ===== */
+.todo-section {
+  padding: 96px 24px;
+  background-color: var(--cream);
+}
+
+.todo-layout {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.todo-text-col {
+  flex: 1;
+}
+
+.todo-text-col h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--green-dark);
+  margin-bottom: 16px;
+}
+
+.todo-text-col > p {
+  color: var(--text-medium);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+/* Styling the unordered list — default bullets are boring! ✅ */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-list li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--white);
+  padding: 20px 24px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--terracotta);
+  transition: var(--transition);
+}
+
+.todo-list li:hover {
+  border-left-color: var(--gold);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.todo-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.todo-list li div strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--green-dark);
+  margin-bottom: 4px;
+}
+
+.todo-list li div p {
+  font-size: 0.92rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.todo-list li div a {
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+.todo-img-col {
+  flex: 0 0 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 100px; /* Sticky sidebar effect! */
+}
+
+/* Image styling ✅ */
+.side-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-warm);
+}
+
+.side-img:first-child { height: 320px; border: 3px solid var(--terracotta); }
+.side-img:last-child { height: 220px; }
+
+/* ===== PHOTO GRID ===== */
+.gallery-section {
+  padding: 96px 24px;
+  background-color: var(--green-dark);
+}
+
+.gallery-section .section-title {
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  grid-template-areas:
+    "p1 tall tall"
+    "p3 wide wide";
+}
+
+.photo-item {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
+  z-index: 1;
+  position: relative;
+}
+
+.photo-item.tall {
+  grid-area: tall;
+  height: 400px;
+}
+
+.photo-item.wide {
+  grid-area: wide;
+}
+
+/* ===== LOCAL TIPS ===== */
+.tips-section {
+  padding: 96px 24px;
+  background-color: var(--cream-dark);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.tip-card {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-warm);
+}
+
+.tip-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.tip-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+  margin-bottom: 10px;
+}
+
+.tip-card p {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ===== BACK HOME BAR ===== */
+.back-home-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  background-color: var(--terracotta);
+}
+
+.back-home-bar a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid rgba(255,255,255,0.4);
+  transition: var(--transition);
+}
+
+.back-home-bar a:hover {
+  background-color: var(--gold);
+  color: var(--green-dark);
+  border-color: var(--gold);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--green-dark);
+  padding: 64px 40px 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand .brand-name {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 8px 0;
+}
+
+.footer-brand p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+
+.footer-links h4 {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links ul a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.footer-links ul a:hover { color: var(--gold); }
+
+.footer-bottom {
+  text-align: center;
+  padding: 24px;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .navbar { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .intro-grid, .todo-layout { flex-direction: column; }
+  .intro-imgs, .todo-img-col { flex: none; width: 100%; }
+  .todo-img-col { position: static; flex-direction: row; }
+  .side-img:first-child { flex: 1; height: 220px; }
+  .side-img:last-child { flex: 1; height: 220px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: none;
+  }
+  .photo-item.tall, .photo-item.wide {
+    grid-area: auto;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .facts-flex { gap: 16px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .back-home-bar { flex-direction: column; gap: 12px; }
+}
