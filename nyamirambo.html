@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags — always first! -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nyamirambo — Discover Kigali</title>
+
+  <!-- Consistent Google Font across all pages -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- This page's dedicated CSS file -->
+  <link rel="stylesheet" href="nyamirambo.css" />
+</head>
+
+<body>
+
+  <!-- Global nav — every page has this! Adding the "active" class to mark where we are -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🌿</span>
+      <span class="brand-name">Discover Kigali</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <!-- Internal link back to Home — required! -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kcc.html">Convention Centre</a></li>
+        <li><a href="nyamirambo.html" class="active">Nyamirambo</a></li>
+        <li><a href="cuisine.html">Cuisine</a></li>
+        <li><a href="memorial.html">Memorial</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn-nav">Plan Your Trip</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page Hero — vibrant and colourful to match Nyamirambo's energy! -->
+    <section class="page-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <!-- Internal link back to home -->
+        <a href="index.html" class="breadcrumb">← Back to Home</a>
+        <span class="page-tag">🎨 Culture & Community</span>
+        <h1>Nyamirambo</h1>
+        <p>Kigali's beating heart — where culture, community, and colour collide in the most beautiful way.</p>
+      </div>
+    </section>
+
+    <!-- ===== INTRO SECTION ===== -->
+    <!-- Using a wide section with a colourful accent to set the energy -->
+    <section class="intro-section">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-text">
+            <h2>Welcome to Kigali's Most Vibrant Neighbourhood</h2>
+            <p>
+              Nyamirambo is not just a neighbourhood — it's an experience. Located in the southwestern part of Kigali, this bustling district is the city's most culturally rich area, a place where the old and new Rwanda coexist in perfect harmony.
+            </p>
+            <p>
+              Known for its lively markets, Islamic heritage (home to Kigali's most beautiful mosques), street food scene, and nightlife, Nyamirambo is where locals go to truly live. Unlike the polished central business district, here you'll find the authentic pulse of daily Kigali life.
+            </p>
+            <p>
+              Rwandan Women's Network runs the famous <strong>Nyamirambo Women's Center</strong>, offering a wonderful cultural tour where you can walk the streets, meet local families, share a traditional meal, and support women-led businesses. This is the must-do experience in the neighbourhood!
+            </p>
+            <!-- External link to the Nyamirambo Women's Centre -->
+            <a href="https://nwc.rw" target="_blank" rel="noopener" class="btn-primary">Visit Women's Centre ↗</a>
+          </div>
+          <div class="intro-imgs">
+            <img
+              src="https://picsum.photos/seed/nyamirambo1/500/400"
+              alt="Colourful street scene in Nyamirambo with women selling fresh vegetables, children playing, and decorated storefronts painted in bright reds and yellows"
+              class="img-main"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUICK FACTS STRIP ===== -->
+    <!-- Flexbox row of stats — adds visual interest! -->
+    <section class="facts-strip">
+      <div class="container facts-flex">
+        <div class="fact-item">
+          <span class="fact-num">200k+</span>
+          <span class="fact-label">Residents</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">~1km²</span>
+          <span class="fact-label">Neighbourhood Size</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">50+</span>
+          <span class="fact-label">Street Food Vendors</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">12</span>
+          <span class="fact-label">Mosques & Churches</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">24/7</span>
+          <span class="fact-label">Always Alive!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THINGS TO DO — UNORDERED LIST ===== -->
+    <!-- Using <ul> here because the order doesn't matter — just a list of cool things! ✅ -->
+    <section class="todo-section">
+      <div class="container">
+        <div class="todo-layout">
+          <div class="todo-text-col">
+            <h2>Must-Do Experiences in Nyamirambo</h2>
+            <p>No visit to Kigali is complete without exploring Nyamirambo. Here are the top things to do and see in this incredible neighbourhood:</p>
+
+            <!-- THE REQUIRED UNORDERED LIST! ✅ -->
+            <ul class="todo-list">
+              <li>
+                <span class="todo-icon">🚶‍♀️</span>
+                <div>
+                  <strong>Join the Nyamirambo Walking Tour</strong>
+                  <p>The Nyamirambo Women's Center runs a fantastic guided walk through the neighbourhood, visiting homes, markets, a mosque, a community kitchen, and finishing with a traditional Rwandan meal. Book at <a href="https://nwc.rw" target="_blank">nwc.rw</a>.</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">🕌</span>
+                <div>
+                  <strong>Visit the Nyamirambo Mosque</strong>
+                  <p>The beautiful Nyamirambo Mosque is the oldest and most prominent in Kigali. Even non-Muslims can admire the architecture from the outside — it's a stunning example of Islamic design in East Africa.</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">🛒</span>
+                <div>
+                  <strong>Shop at Kimisagara Market</strong>
+                  <p>A sprawling open market where you can find fresh produce, handmade crafts, fabrics, and everyday goods at local prices. Arrive in the morning for the best selection!</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">🍢</span>
+                <div>
+                  <strong>Try Street Brochettes at Dusk</strong>
+                  <p>As evening falls, the streets of Nyamirambo fill with the smell of sizzling brochettes (meat skewers) grilled over charcoal. Pull up a plastic chair and eat like a local for under RWF 2,000.</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">🎵</span>
+                <div>
+                  <strong>Experience the Nightlife on Avenue de la Paix</strong>
+                  <p>Nyamirambo is Kigali's nightlife hub. The Avenue de la Paix (Peace Avenue) lights up after dark with live music, open-air bars, and dancing that goes until sunrise.</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">🎨</span>
+                <div>
+                  <strong>Find Imigongo Art at Local Workshops</strong>
+                  <p>Several artists in Nyamirambo produce the famous Imigongo art — bold geometric patterns made from cow dung and natural pigments. Visit a workshop and watch it being made!</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">☕</span>
+                <div>
+                  <strong>Drink Coffee at a Local Café</strong>
+                  <p>Rwanda produces some of the world's finest arabica coffee. The small local cafés in Nyamirambo brew it the traditional way — strong, sweet, and served in a tiny cup. Heavenly!</p>
+                </div>
+              </li>
+              <li>
+                <span class="todo-icon">🧶</span>
+                <div>
+                  <strong>Buy Handcrafted Baskets & Textiles</strong>
+                  <p>Rwanda's woven peace baskets (Agaseke) are world-famous — and you can buy them directly from the women who weave them in Nyamirambo. These make perfect souvenirs!</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="todo-img-col">
+            <img
+              src="https://picsum.photos/seed/nyamirambo2/400/500"
+              alt="A Rwandan woman weaving a traditional Agaseke peace basket using colourful sisal fibers and natural dyes, hands close up"
+              class="side-img"
+            />
+            <img
+              src="https://picsum.photos/seed/nyamirambo3/400/300"
+              alt="Street food vendor in Nyamirambo grilling meat brochettes on a charcoal grill, surrounded by customers at dusk"
+              class="side-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHOTO GALLERY ===== -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">Nyamirambo in Photos</h2>
+        <div class="photo-grid">
+          <img
+            src="https://picsum.photos/seed/nyam-photo1/400/300"
+            alt="Children laughing and playing football in a Nyamirambo alleyway with murals painted on the walls behind them"
+            class="photo-item"
+          />
+          <img
+            src="https://picsum.photos/seed/nyam-photo2/400/500"
+            alt="Aerial view of Nyamirambo's densely packed terracotta-roofed homes stepping up a green hillside at sunset"
+            class="photo-item tall"
+          />
+          <img
+            src="https://picsum.photos/seed/nyam-photo3/400/300"
+            alt="Colourful rows of handmade Rwandan fabrics and prints hanging outside a Nyamirambo textile shop"
+            class="photo-item"
+          />
+          <img
+            src="https://picsum.photos/seed/nyam-photo4/600/300"
+            alt="A busy Nyamirambo street market with vendors, motorcycles, and shoppers in the golden afternoon light"
+            class="photo-item wide"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOCAL TIPS SECTION ===== -->
+    <section class="tips-section">
+      <div class="container">
+        <h2 class="section-title">Local Tips for Visiting</h2>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <span class="tip-emoji">🌅</span>
+            <h3>Best Time to Visit</h3>
+            <p>Early morning (7–9am) for markets, or early evening (6–9pm) for street food and nightlife. Avoid midday heat!</p>
+          </div>
+          <div class="tip-card">
+            <span class="tip-emoji">💰</span>
+            <h3>Budget</h3>
+            <p>Nyamirambo is very affordable. A full street meal costs RWF 2,000–5,000 (≈ $2–5 USD). Always carry small notes!</p>
+          </div>
+          <div class="tip-card">
+            <span class="tip-emoji">📷</span>
+            <h3>Photos & Privacy</h3>
+            <p>Always ask before photographing residents. Most people are happy to pose, but it's polite to check first!</p>
+          </div>
+          <div class="tip-card">
+            <span class="tip-emoji">🗺️</span>
+            <h3>Getting Around</h3>
+            <p>Moto-taxis (motos) are the fastest way to get to Nyamirambo from central Kigali. Cost: ~RWF 1,500–2,500.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to home navigation -->
+    <div class="back-home-bar">
+      <a href="index.html">← Back to Home</a>
+      <a href="cuisine.html">Next: Rwandan Cuisine →</a>
+    </div>
+
+  </main>
+
+  <!-- Using <footer> for semantic correctness! -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">🌿</span>
+        <span class="brand-name">Discover Kigali</span>
+        <p>Your guide to Rwanda's beautiful capital city.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kcc.html">Convention Centre</a></li>
+          <li><a href="nyamirambo.html">Nyamirambo</a></li>
+          <li><a href="cuisine.html">Rwandan Cuisine</a></li>
+          <li><a href="memorial.html">Genocide Memorial</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>External Links</h4>
+        <ul>
+          <li><a href="https://www.visitrwanda.com" target="_blank" rel="noopener">Visit Rwanda</a></li>
+          <li><a href="https://nwc.rw" target="_blank" rel="noopener">Nyamirambo Women's Centre</a></li>
+          <li><a href="https://www.kgm.rw" target="_blank" rel="noopener">Kigali City</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Discover Kigali. Built with HTML, CSS & love for Rwanda. 🇷🇼</p>
+    </div>
+  </footer>
+
+</body>
+</html>
