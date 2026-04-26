@@ -65,10 +65,10 @@ This design reflects the idea of **"Modern Kigali"** — a city that is clean, v
 
 ## Media Features Included
 
-- ✔ High-quality images of Kigali locations  
-- ✔ Embedded YouTube video showcasing Kigali  
-- ✔ Traditional African-style audio (Rwandan-inspired)  
-- ✔ Embedded Google Map for location context  
+- High-quality images of Kigali locations  
+- Embedded YouTube video showcasing Kigali  
+- Traditional African-style audio (Rwandan-inspired)  
+- Embedded Google Map for location context  
 
 ---
 
