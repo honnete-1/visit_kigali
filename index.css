@@ -5,21 +5,21 @@
   =====================================================
 
   🎨 DESIGN STORY:
-  The "Kigali Verde & Sunset" colour palette was carefully chosen
-  to reflect Rwanda's soul:
+  The "Kigali Midnight & Gold" professional theme represents
+  the "Modern Spark of Kigali" — combining the sophistication
+  of the city at night with its golden opportunities.
 
-  🌿 Green (#2D5A27) — The lush thousand hills that surround Kigali,
-     the banana trees, the tea plantations, and Rwanda's famous
-     commitment to environmental protection.
+  Color Palette:
+  — Main Background: #F8F9FA (Clean Slate)
+  — Primary Headers/Nav: #0F1419 (Midnight Navy)
+  — Primary Buttons/Accents: #C5A059 (Brushed Gold)
+  — Hover Effects: #00D2FF (Electric Cyan)
 
-  🌅 Terracotta (#E38C6A) — The warm clay soil of Rwanda's hillsides,
-     the sunset over Lake Kivu, and the warmth of Rwandan hospitality.
-
-  🏜️ Cream (#F5F5DC) — The light, airy feeling of Rwanda's highland
-     climate and the clean, welcoming spaces of modern Kigali.
-
-  ✨ Gold (#FFD700) — The golden sunlight, the shine in every
-     Rwandan smile, and the bright future this country is building.
+  This design combines the darkness of Rwanda's past with the
+  bright future the country is building. The midnight navy represents
+  both the depth of Kigali's history and the modern skyline, while
+  the gold symbolizes the golden opportunities and warm hospitality
+  that await visitors.
 
   Typography: "Outfit" for clean modern UI + "Playfair Display" for
   elegant headings that feel prestigious without being stuffy.
@@ -27,20 +27,35 @@
   I'm super proud of how this came together! — Junior Dev 🌍
 */
 
-/* ===== CSS VARIABLES — My mentor showed me this trick! So much easier to change colours now ===== */
+/* ===== CSS VARIABLES — Kigali Midnight & Gold Theme ===== */
 :root {
-  --green: #2D5A27;
-  --green-light: #3d7a34;
-  --green-dark: #1e3d1b;
-  --terracotta: #E38C6A;
-  --terracotta-light: #f0a98a;
-  --cream: #F5F5DC;
-  --cream-dark: #ede9c8;
-  --gold: #FFD700;
-  --gold-dark: #e6c200;
-  --text-dark: #1a1a1a;
-  --text-medium: #444;
-  --text-light: #777;
+  /* Midnight Navy */
+  --midnight: #0F1419;
+  --midnight-light: #1a2530;
+  --midnight-dark: #080c10;
+
+  /* Brushed Gold */
+  --gold: #C5A059;
+  --gold-light: #d4b06a;
+  --gold-dark: #a88645;
+
+  /* Clean Slate */
+  --slate: #F8F9FA;
+  --slate-dark: #e9ecef;
+  --slate-light: #ffffff;
+
+  /* Electric Cyan for hover */
+  --cyan: #00D2FF;
+  --cyan-light: #4de1ff;
+  --cyan-dark: #00a8cc;
+
+  /* Text Colors */
+  --text-dark: #0F1419;
+  --text-medium: #495057;
+  --text-light: #6c757d;
+  --text-muted: #adb5bd;
+
+  /* Utility */
   --white: #ffffff;
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-md: 0 6px 24px rgba(0,0,0,0.12);
@@ -63,7 +78,7 @@ html {
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: var(--cream);
+  background-color: var(--slate);
   color: var(--text-dark);
   line-height: 1.7;
   overflow-x: hidden;
@@ -79,7 +94,7 @@ body {
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--green-dark);
+  color: var(--midnight);
   text-align: center;
   margin-bottom: 12px;
 }
@@ -99,7 +114,7 @@ body {
 .btn-primary {
   display: inline-block;
   background-color: var(--gold);
-  color: var(--green-dark);
+  color: var(--midnight);
   padding: 14px 32px;
   border-radius: var(--radius);
   text-decoration: none;
@@ -110,7 +125,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--gold-dark);
+  background-color: var(--gold-light);
+  color: var(--midnight);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -130,7 +146,7 @@ body {
 
 .btn-secondary:hover {
   background-color: var(--white);
-  color: var(--green-dark);
+  color: var(--midnight);
 }
 
 /* ===== NAVBAR ===== */
@@ -145,7 +161,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 18px 40px;
-  background-color: rgba(45, 90, 39, 0.95);
+  background-color: rgba(15, 20, 25, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-md);
 }
@@ -185,17 +201,17 @@ body {
   transition: var(--transition);
 }
 
-/* The required hover effect! Yellow (#FFD700) on hover ✅ */
+/* The required hover effect! Gold (#C5A059) on hover with cyan highlight ✅ */
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: var(--gold);
-  color: var(--green-dark);
+  color: var(--midnight);
   font-weight: 700;
 }
 
 .btn-nav {
-  background-color: var(--terracotta);
-  color: var(--white);
+  background-color: var(--gold);
+  color: var(--midnight);
   padding: 10px 22px;
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -205,8 +221,8 @@ body {
 }
 
 .btn-nav:hover {
-  background-color: var(--gold);
-  color: var(--green-dark);
+  background-color: var(--cyan);
+  color: var(--midnight);
 }
 
 /* ===== HERO SECTION ===== */
@@ -410,7 +426,7 @@ body {
 .dest-info h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
-  color: var(--green-dark);
+  color: var(--midnight);
   margin-bottom: 10px;
 }
 
@@ -421,19 +437,19 @@ body {
 }
 
 .dest-link {
-  color: var(--terracotta);
+  color: var(--gold);
   font-weight: 700;
   font-size: 0.95rem;
 }
 
 .dest-card:hover .dest-link {
-  color: var(--green);
+  color: var(--cyan);
 }
 
 /* ===== PLAN YOUR VISIT SECTION ===== */
 .plan-section {
   padding: 96px 24px;
-  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+  background: linear-gradient(135deg, var(--midnight) 0%, var(--midnight-light) 100%);
 }
 
 .plan-container {
@@ -526,7 +542,7 @@ body {
 /* ===== MAP SECTION ===== */
 .map-section {
   padding: 96px 24px;
-  background-color: var(--cream-dark);
+  background-color: var(--slate-dark);
 }
 
 /* Same 16:9 ratio trick I used for the video! */
@@ -537,7 +553,7 @@ body {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  border: 3px solid var(--green);
+  border: 3px solid var(--gold);
 }
 
 .map-wrapper iframe {
@@ -681,8 +697,8 @@ body {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.15);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
 }
 
 .form-group textarea {
@@ -692,8 +708,8 @@ body {
 
 .btn-submit {
   grid-column: 1 / -1;
-  background-color: var(--green);
-  color: var(--white);
+  background-color: var(--gold);
+  color: var(--midnight);
   border: none;
   padding: 16px 32px;
   border-radius: var(--radius-sm);
@@ -705,15 +721,15 @@ body {
 }
 
 .btn-submit:hover {
-  background-color: var(--gold);
-  color: var(--green-dark);
+  background-color: var(--cyan);
+  color: var(--midnight);
   transform: translateY(-2px);
 }
 
 /* ===== FOOTER ===== */
 /* Using <footer> keeps this section semantically correct! */
 .footer {
-  background-color: var(--green-dark);
+  background-color: var(--midnight);
   padding: 64px 40px 0;
 }
 

@@ -4,33 +4,54 @@
   Project: Discover Kigali Tourism Website
   =====================================================
 
-  Design Story:
+  🎨 DESIGN STORY:
+  The "Kigali Midnight & Gold" professional theme represents
+  the "Modern Spark of Kigali" — combining the sophistication
+  of the city at night with its golden opportunities.
+
+  Color Palette:
+  — Main Background: #F8F9FA (Clean Slate)
+  — Primary Headers/Nav: #0F1419 (Midnight Navy)
+  — Primary Buttons/Accents: #C5A059 (Brushed Gold)
+  — Hover Effects: #00D2FF (Electric Cyan)
+
   Nyamirambo is the most energetic and colourful neighbourhood
-  in Kigali, so this CSS goes a bit warmer and more vibrant than
-  the other pages. I used terracotta more prominently here, and
-  the layout feels looser and more "street-level" compared to the
-  polished KCC page. The photos and cards have a slightly warmer
-  shadow to evoke the golden light of a Kigali evening. 🌅
+  in Kigali, so this CSS goes for a more vibrant yet professional feel.
+  The gold accents on midnight background evoke the evening lights
+  of this bustling district.
   — Junior Dev 🎨
 */
 
-/* ===== CSS VARIABLES ===== */
+/* ===== CSS VARIABLES — Kigali Midnight & Gold Theme ===== */
 :root {
-  --green: #2D5A27;
-  --green-light: #3d7a34;
-  --green-dark: #1e3d1b;
-  --terracotta: #E38C6A;
-  --terracotta-light: #f0a98a;
-  --terracotta-dark: #c96e4e;
-  --cream: #F5F5DC;
-  --cream-dark: #ede9c8;
-  --gold: #FFD700;
-  --gold-dark: #e6c200;
-  --text-dark: #1a1a1a;
-  --text-medium: #444;
-  --text-light: #777;
+  /* Midnight Navy */
+  --midnight: #0F1419;
+  --midnight-light: #1a2530;
+  --midnight-dark: #080c10;
+
+  /* Brushed Gold */
+  --gold: #C5A059;
+  --gold-light: #d4b06a;
+  --gold-dark: #a88645;
+
+  /* Clean Slate */
+  --slate: #F8F9FA;
+  --slate-dark: #e9ecef;
+  --slate-light: #ffffff;
+
+  /* Electric Cyan for hover */
+  --cyan: #00D2FF;
+  --cyan-light: #4de1ff;
+  --cyan-dark: #00a8cc;
+
+  /* Text Colors */
+  --text-dark: #0F1419;
+  --text-medium: #495057;
+  --text-light: #6c757d;
+  --text-muted: #adb5bd;
+
+  /* Utility */
   --white: #ffffff;
-  --shadow-warm: 0 6px 24px rgba(227, 140, 106, 0.2);
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-md: 0 6px 24px rgba(0,0,0,0.12);
   --shadow-lg: 0 16px 48px rgba(0,0,0,0.18);
@@ -50,7 +71,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: var(--cream);
+  background-color: var(--slate);
   color: var(--text-dark);
   line-height: 1.7;
   overflow-x: hidden;
@@ -65,7 +86,7 @@ body {
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--green-dark);
+  color: var(--midnight);
   text-align: center;
   margin-bottom: 12px;
 }
@@ -116,17 +137,17 @@ body {
   transition: var(--transition);
 }
 
-/* Yellow hover effect — consistent on every page! ✅ */
+/* Gold hover effect with cyan highlight — consistent on every page! ✅ */
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: var(--gold);
-  color: var(--green-dark);
+  color: var(--midnight);
   font-weight: 700;
 }
 
 .btn-nav {
-  background-color: var(--terracotta);
-  color: var(--white);
+  background-color: var(--gold);
+  color: var(--midnight);
   padding: 10px 22px;
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -136,8 +157,8 @@ body {
 }
 
 .btn-nav:hover {
-  background-color: var(--gold);
-  color: var(--green-dark);
+  background-color: var(--cyan);
+  color: var(--midnight);
 }
 
 /* ===== PAGE HERO — Warm terracotta-tinted overlay for the Nyamirambo vibe ===== */
@@ -228,7 +249,7 @@ body {
 .intro-text h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
-  color: var(--green-dark);
+  color: var(--midnight);
   margin-bottom: 20px;
 }
 
@@ -327,7 +348,7 @@ body {
 .todo-text-col h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
-  color: var(--green-dark);
+  color: var(--midnight);
   margin-bottom: 16px;
 }
 
@@ -371,7 +392,7 @@ body {
 .todo-list li div strong {
   display: block;
   font-size: 1.05rem;
-  color: var(--green-dark);
+  color: var(--midnight);
   margin-bottom: 4px;
 }
 
