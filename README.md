@@ -5,7 +5,7 @@ Discover Kigali is a multi-page website built using HTML and CSS that showcases 
 
 The project focuses on delivering a visually appealing, user-friendly, and informative experience for anyone planning to explore Kigali.
 
-**Live Demo: ** https://visit-kigali-omega.vercel.app/
+**Live Demo:** https://visit-kigali-omega.vercel.app/
 
 ---
 
