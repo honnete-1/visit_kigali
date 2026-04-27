@@ -11,13 +11,17 @@
 <!-- Sticky navigation bar shared across all pages -->
 <header class="site-header">
   <a class="logo" href="index.html"><span>✦</span> Discover Kigali</a>
-  <nav class="nav-menu">
+  <nav class="nav-menu" id="nav-menu">
     <a class="active" href="index.html">Home</a>
     <a href="kcc.html">Convention Centre</a>
     <a href="nyamirambo.html">Nyamirambo</a>
     <a href="cuisine.html">Cuisine</a>
     <a href="memorial.html">Memorial</a>
   </nav>
+    <button class="hamburger" aria-label="Toggle navigation"
+    onclick="this.classList.toggle('open'); document.getElementById('nav-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
   <a class="nav-button" href="#plan">Plan Your Trip</a>
 </header>
 
