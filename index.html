@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+<!-- Sticky navigation bar shared across all pages -->
 <header class="site-header">
   <a class="logo" href="index.html"><span>✦</span> Discover Kigali</a>
   <nav class="nav-menu">
@@ -18,17 +20,20 @@
   </nav>
   <a class="nav-button" href="#plan">Plan Your Trip</a>
 </header>
+
 <main>
-<!-- Junior developer note: Main content is divided into sections to make navigation and styling easier. -->
+
+<!-- Hero section: full-screen banner with background image set via CSS custom property -->
 <section class="hero" style="--hero:url('https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20%28Rwanda%29%20by%20night.jpg')">
   <div class="hero-content">
-    <span class="eyebrow">Kigali Midnight & Gold</span>
+    <span class="eyebrow">Kigali Midnight &amp; Gold</span>
     <h1>Explore Kigali after sunrise and after sunset.</h1>
     <p>A visitor guide featuring Kigali landmarks, culture, food, history, maps, video, music, and practical planning information for Rwanda's capital city.</p>
     <a class="btn" href="#places">Start Exploring</a>
   </div>
 </section>
 
+<!-- Destination cards section: four clickable cards linking to each place page -->
 <section class="section" id="places">
   <h2 class="section-title">Featured places to visit</h2>
   <p class="section-sub">Choose a destination page below. Each page includes useful visitor information and a link back to the homepage.</p>
@@ -36,10 +41,11 @@
     <article class="card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20Convention%20center%2C%20Rwanda.jpg" alt="Kigali Convention Centre"><div class="card-body"><span class="tag">City Landmark</span><h3>Kigali Convention Centre</h3><p>A modern landmark known for its colorful dome, nearby hotels, restaurants, and night-city atmosphere.</p><a class="btn" href="kcc.html">Open Page</a></div></article>
     <article class="card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20Nyamirambo%20beautiful%20Naturally.jpg" alt="Nyamirambo hillside in Kigali"><div class="card-body"><span class="tag">Culture Walk</span><h3>Nyamirambo</h3><p>A lively neighborhood for walking tours, local shops, street life, mosques, community stories, and city views.</p><a class="btn" href="nyamirambo.html">Open Page</a></div></article>
     <article class="card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/ISOMBE%20AND%20RICE.jpg" alt="Traditional Rwandan isombe and rice"><div class="card-body"><span class="tag">Food</span><h3>Rwandan Cuisine</h3><p>Discover isombe, brochettes, local markets, fresh produce, and Rwandan coffee.</p><a class="btn" href="cuisine.html">Open Page</a></div></article>
-    <article class="card"><img src="assets/kigali-genocide-memorial-entrance.png" alt="Kigali Genocide Memorial"><div class="card-body"><span class="tag">Learning</span><h3>Kigali Genocide Memorial</h3><p>A respectful place of remembrance, education, reflection, and peace-building in Gisozi.</p><a class="btn" href="memorial.html">Open Page</a></div></article>
+    <article class="card"><img src="https://visitrwanda.com/wp-content/uploads/fly-images/1225/Visit-Rwanda-Kigali-Genocide-Museum-1920x1280.jpg" alt="Kigali Genocide Memorial"><div class="card-body"><span class="tag">Learning</span><h3>Kigali Genocide Memorial</h3><p>A respectful place of remembrance, education, reflection, and peace-building in Gisozi.</p><a class="btn" href="memorial.html">Open Page</a></div></article>
   </div>
 </section>
 
+<!-- Trip planning steps: numbered guide with night photo of the city -->
 <section class="section dark">
   <div class="split">
     <div>
@@ -60,61 +66,82 @@
   </div>
 </section>
 
+<!-- Photo gallery: four landmark images in a grid layout -->
 <section class="section cream">
   <h2 class="section-title">A Glimpse of Kigali</h2>
   <div class="gallery">
     <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20Convention%20center%2C%20Rwanda.jpg" alt="Kigali Convention Centre"><figcaption>Kigali Convention Centre</figcaption></figure>
-    <figure><img src="assets/kigali-genocide-memorial-entrance.png" alt="Kigali Genocide Memorial"><figcaption>Kigali Genocide Memorial</figcaption></figure>
+    <figure><img src="https://visitrwanda.com/wp-content/uploads/fly-images/1225/Visit-Rwanda-Kigali-Genocide-Museum-1920x1280.jpg" alt="Kigali Genocide Memorial"><figcaption>Kigali Genocide Memorial</figcaption></figure>
     <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20Nyamirambo%20beautiful%20Naturally.jpg" alt="Nyamirambo Kigali"><figcaption>Nyamirambo Hills</figcaption></figure>
-    <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20downtown%20food%20spot.jpg" alt="Kigali downtown food spot"><figcaption>Food & City Life</figcaption></figure>
+    <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20downtown%20food%20spot.jpg" alt="Kigali downtown food spot"><figcaption>Food &amp; City Life</figcaption></figure>
   </div>
 </section>
 
+<!-- Video section: two YouTube embeds displayed as click-to-play thumbnails.
+     Thumbnails load fast and only fetch the full iframe after the visitor clicks. -->
 <section class="section dark">
   <div class="split">
     <div>
       <h2 class="section-title">Kigali video and music</h2>
-      <p class="section-sub">This section includes the updated Kigali YouTube video and keeps a real HTML video element for the assignment requirement.</p>
-      <div class="media-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/5FVO3IHwIzw" title="Kigali video" allowfullscreen></iframe></div>
+      <p class="section-sub">Watch two visual stories of Kigali — a Visit Rwanda tourism video on the left, and a 4K timelapse of the city on the right.</p>
+
+      <!-- Official Visit Rwanda tourism video -->
+      <div class="yt-embed">
+        <img src="https://img.youtube.com/vi/5FVO3IHwIzw/maxresdefault.jpg" alt="Visit Rwanda official tourism video">
+        <button class="yt-play" aria-label="Play Visit Rwanda video"
+          onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/5FVO3IHwIzw?autoplay=1\' title=\'Visit Rwanda\' allowfullscreen allow=\'autoplay; encrypted-media\'></iframe>'">
+          &#9654;
+        </button>
+      </div>
     </div>
-    <div class="media-box">
-      <h3>Backup HTML video element</h3>
-      <video controls poster="https://commons.wikimedia.org/wiki/Special:FilePath/Kigali%20%28Rwanda%29%20by%20night.jpg">
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p class="section-sub">This simple playable video is kept only to satisfy the HTML video tag requirement.</p>
+
+    <div>
+      <h3>Kigali &mdash; City in Motion</h3>
+
+      <!-- Kigali in Motion 4K timelapse by filmmaker Mayeul Akpovi, shot over 9 days across the city -->
+      <div class="yt-embed">
+        <img src="https://img.youtube.com/vi/oeOdHMPhZaQ/maxresdefault.jpg" alt="Kigali in Motion 4K timelapse">
+        <button class="yt-play" aria-label="Play Kigali in Motion 4K"
+          onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/oeOdHMPhZaQ?autoplay=1\' title=\'Kigali in Motion 4K Rwanda\' allowfullscreen allow=\'autoplay; encrypted-media\'></iframe>'">
+          &#9654;
+        </button>
+      </div>
+      <p class="section-sub">A stunning 4K timelapse of Kigali shot over 9 days across the city.</p>
     </div>
   </div>
 </section>
 
+<!-- Quick facts table: practical information about transport, food, and visitor behavior -->
 <section class="section">
   <h2 class="section-title">Kigali quick facts table</h2>
   <div class="table-wrap"><table><thead><tr><th>Category</th><th>Helpful information</th><th>Visitor tip</th></tr></thead><tbody><tr><td>Transport</td><td>Moto taxis, buses, taxis, and ride-hailing are common.</td><td>Ask for the price or use an app before starting a trip.</td></tr><tr><td>Best time</td><td>Morning and late afternoon are comfortable for walking.</td><td>Carry water and comfortable shoes.</td></tr><tr><td>Food</td><td>Local dishes include isombe, brochettes, ibirayi, and coffee.</td><td>Try both a restaurant and a local market experience.</td></tr><tr><td>Respect</td><td>Some places, especially memorial sites, require quiet behavior.</td><td>Dress respectfully and follow site instructions.</td></tr></tbody></table></div>
 </section>
 
-<section class="section cream" id="plan">
+<!-- Newsletter signup form: collects name, email, interest, and an optional personal message -->
+<section class="section dark" id="plan">
   <div class="split">
     <div>
       <h2 class="section-title">Stay in the Loop</h2>
       <p>Get weekly travel tips, hidden gems, and Kigali ideas delivered straight to your inbox.</p>
-      <ul class="feature-list"><li>✅ Weekly destination guides</li><li>✅ Best restaurant picks</li><li>✅ Event and festival alerts</li><li>✅ Practical travel reminders</li></ul>
+      <ul class="feature-list"><li>&#9989; Weekly destination guides</li><li>&#9989; Best restaurant picks</li><li>&#9989; Event and festival alerts</li><li>&#9989; Practical travel reminders</li></ul>
     </div>
     <form class="form">
       <div class="row"><label>First Name<input type="text" placeholder="e.g. Amina"></label><label>Last Name<input type="text" placeholder="e.g. Uwimana"></label></div>
       <label>Email Address<input type="email" placeholder="you@example.com"></label>
       <label>I'm most interested in<select><option>-- Select an option --</option><option>Kigali Convention Centre</option><option>Nyamirambo</option><option>Rwandan Cuisine</option><option>Kigali Genocide Memorial</option></select></label>
       <label>Your Message<textarea rows="4" placeholder="Tell us about your dream Kigali trip..."></textarea></label>
-      <button class="btn" type="submit">Subscribe & Explore 🌍</button>
+      <button class="btn" type="submit">Subscribe &amp; Explore &#127757;</button>
     </form>
   </div>
 </section>
 
+<!-- Google Maps embed showing Kigali City Center location -->
 <section class="section">
   <h2 class="section-title">Map of Kigali City Center</h2>
   <div class="map"><iframe title="Map of Kigali City Center" src="https://www.google.com/maps?q=Kigali%20City%20Center%20Rwanda&output=embed" height="420" loading="lazy"></iframe></div>
 </section>
+
 </main>
-<footer class="footer"><p>&copy; 2026 Discover Kigali. Created for an HTML & CSS class project by Honnete Nishimwe.</p></footer>
+<footer class="footer"><p>&copy; 2026 Discover Kigali. Created for an HTML &amp; CSS class project by Honnete Nishimwe.</p></footer>
 </body>
 </html>

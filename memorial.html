@@ -19,16 +19,20 @@
   <a class="nav-button" href="index.html#plan">Plan Visit</a>
 </header>
 <main>
-<!-- Junior developer note: The memorial page uses respectful text and calm images because this place requires dignity. -->
-<section class="hero" style="--hero:url('assets/kigali-genocide-memorial-entrance.png')">
+
+<!-- Hero section: background is set via --hero CSS custom property defined inline.
+     This pattern lets each page use its own image without changing the shared CSS. -->
+<section class="hero" style="--hero:url('https://visitrwanda.com/wp-content/uploads/fly-images/1225/Visit-Rwanda-Kigali-Genocide-Museum-1920x1280.jpg')">
   <div class="hero-content">
-    <a class="back-link" href="index.html">← Back to Home</a>
+    <a class="back-link" href="index.html">&#8592; Back to Home</a>
     <span class="eyebrow">Remembrance and learning</span>
     <h1>Kigali Genocide Memorial</h1>
     <p>A respectful memorial site in Gisozi where visitors learn about the 1994 Genocide against the Tutsi and Rwanda's journey of remembrance and unity.</p>
   </div>
 </section>
 
+<!-- Visitor guidance section: explains behavior expectations at the memorial.
+     The .note element is a highlighted tip box styled in memorial.css. -->
 <section class="section">
   <div class="split">
     <div>
@@ -41,36 +45,41 @@
       </ul>
       <div class="note">Tip: allocate enough time. This is not a place to rush through quickly.</div>
     </div>
-    <img src="assets/kigali-genocide-memorial-entrance.png" alt="Entrance of Kigali Genocide Memorial">
+    <!-- Photo sourced from visitrwanda.com, the official Rwanda tourism website -->
+    <img src="https://visitrwanda.com/wp-content/uploads/fly-images/1845/Visit-Rwanda-Kigali-Genocide-Memorial-Gisozi-1920x1304.jpg" alt="Entrance of Kigali Genocide Memorial">
   </div>
 </section>
 
+<!-- Photo gallery: three calm images of the memorial entrance, reflection area, and gardens.
+     Each uses a different photo from visitrwanda.com so they all look distinct. -->
 <section class="section cream">
   <h2 class="section-title">Memorial Site in Photos</h2>
   <p class="section-sub">These images give a calm visual preview of the memorial entrance, gardens, and reflection areas.</p>
   <div class="gallery">
     <figure>
-      <img src="assets/kigali-genocide-memorial-entrance.png" alt="Kigali Genocide Memorial entrance arch">
+      <img src="https://visitrwanda.com/wp-content/uploads/fly-images/1223/Visit-Rwanda-Kigali-Genocide-Museum-Sign-1920x1280.jpg" alt="Kigali Genocide Memorial entrance arch">
       <figcaption>Memorial Entrance</figcaption>
     </figure>
     <figure>
-      <img src="assets/kigali-genocide-memorial-entrance.png" alt="Kigali Genocide Memorial reflection area">
+      <img src="https://visitrwanda.com/wp-content/uploads/fly-images/1846/Visit-Rwanda-Flame-of-Remembrance-1920x1280.jpg" alt="Kigali Genocide Memorial reflection area">
       <figcaption>Reflection Area</figcaption>
     </figure>
     <figure>
-      <img src="assets/kigali-genocide-memorial-entrance.png" alt="Kigali Genocide Memorial gardens">
+      <img src="https://visitrwanda.com/wp-content/uploads/fly-images/1224/Visit-Rwanda-Kigali-Genocide-Museum-Family-Photographs-1920x1280.jpg" alt="Kigali Genocide Memorial gardens">
       <figcaption>Peaceful Gardens</figcaption>
     </figure>
   </div>
 </section>
 
+<!-- Google Maps embed pointing directly to the Kigali Genocide Memorial in Gisozi -->
 <section class="section">
   <h2 class="section-title">Location map</h2>
   <div class="map"><iframe title="Kigali Genocide Memorial map" src="https://www.google.com/maps?q=Kigali%20Genocide%20Memorial&output=embed" height="430" loading="lazy"></iframe></div>
 </section>
+
 </main>
 <footer class="footer">
-  <p>&copy; 2026 Visit Kigali. Created for an HTML & CSS class project by Honnete Nishimwe.</p>
+  <p>&copy; 2026 Visit Kigali. Created for an HTML &amp; CSS class project by Honnete Nishimwe.</p>
 </footer>
 </body>
 </html>

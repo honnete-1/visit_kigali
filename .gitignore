@@ -1,0 +1,19 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Code editor folders
+.vscode/
+.idea/
+
+# Node (in case you ever use Live Server or npm tools)
+node_modules/
+
+# Logs
+*.log
+
+# Zip/archive files (no need to commit these)
+*.zip
+*.rar
+*.tar.gz
