@@ -5,8 +5,6 @@
 
 > Discover Kigali is a multi-page website built using HTML and CSS that showcases some of the best places to visit and things to do in Kigali, Rwanda. The website provides visitors with useful information about popular destinations such as the Kigali Convention Centre, Nyamirambo, Rwandan cuisine, and the Kigali Genocide Memorial. The project focuses on delivering a visually appealing, user-friendly, and informative experience for anyone planning to explore Kigali. 
 
-The project focuses on delivering a visually appealing, user-friendly, and informative experience for anyone planning to explore Kigali.
-
 **Live Demo:** https://visit-kigali-omega.vercel.app/
 
 ---
