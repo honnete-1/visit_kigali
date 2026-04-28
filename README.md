@@ -3,7 +3,11 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
-> A multi-page travel and city guide website showcasing Kigali, Rwanda — built as an HTML & CSS class project.
+> Discover Kigali is a multi-page website built using HTML and CSS that showcases some of the best places to visit and things to do in Kigali, Rwanda. The website provides visitors with useful information about popular destinations such as the Kigali Convention Centre, Nyamirambo, Rwandan cuisine, and the Kigali Genocide Memorial.
+
+The project focuses on delivering a visually appealing, user-friendly, and informative experience for anyone planning to explore Kigali. Discover Kigali is a multi-page website built using HTML and CSS that showcases some of the best places to visit and things to do in Kigali, Rwanda. The website provides visitors with useful information about popular destinations such as the Kigali Convention Centre, Nyamirambo, Rwandan cuisine, and the Kigali Genocide Memorial.
+
+The project focuses on delivering a visually appealing, user-friendly, and informative experience for anyone planning to explore Kigali.
 
 **Live Demo:** https://visit-kigali-omega.vercel.app/
 
