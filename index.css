@@ -459,7 +459,7 @@ tr:hover td {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-/* ── Hamburger button ─────────────────────────────────────────── */
+/*  Hamburger button  */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -484,7 +484,7 @@ tr:hover td {
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ── Tablet: 850px ────────────────────────────────────────────── */
+/*  Tablet: 850px  */
 @media (max-width: 850px) {
   .site-header {
     position: sticky;
@@ -558,7 +558,7 @@ tr:hover td {
   }
 }
 
-/* ── Mobile: 600px ────────────────────────────────────────────── */
+/*  Mobile: 600px  */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;

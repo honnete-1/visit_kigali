@@ -558,7 +558,7 @@ tr:hover td {
   }
 }
 
-/* ── Mobile: 600px ────────────────────────────────────────────── */
+/*  Mobile: 600px  */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
@@ -589,7 +589,7 @@ tr:hover td {
   }
 }
 
-/* ── Small phones: 420px ──────────────────────────────────────── */
+/*  Small phones: 420px  */
 @media (max-width: 420px) {
   .gallery {
     grid-template-columns: 1fr;
